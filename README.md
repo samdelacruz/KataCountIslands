@@ -1,3 +1,3 @@
-# TypeScript Kata Starter
+# TypeScript Kata Islands
 
-A TypeScript + Jest starter project for Katas.
+A TypeScript + Jest kata for counting islands in a 2d array.
