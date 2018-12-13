@@ -24,11 +24,7 @@ function visitAll(image: number[][], visited: boolean[][], i: number, j: number)
   const adjacentCoordinates = getAdjacents(i, j, image.length - 1, image[i].length - 1);
 
   return (
-    1 +
-    adjacentCoordinates.reduce((acc, [_i, _j]) => {
-      const subIslandSize = visitAll(image, visited, _i, _j);
-      return acc || subIslandSize;
-    }, 0)
+    1 + adjacentCoordinates.reduce((acc, [_i, _j]) => visitAll(image, visited, _i, _j) && acc, 0)
   );
 }
 
